@@ -7,6 +7,7 @@ class MainWindow:
         self.name = GenerationNameComplexity()
         self.functional_objects = GenerationEntryAndButton()
         self.main_button = GenerationMainGraph()
+       
         
     def draw_main(self):
         root = Tk()

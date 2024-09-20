@@ -3,7 +3,9 @@ from tkinter import ttk
 from drawing import QuadraticComplexity, LogarithmicComplexity, LinearComplexity, FactorialComplexity, ConstantComplexity
 from main_drawing import MainDraw
 
+
 TEXT = "Получить график!"
+
 
 class GenerationNameComplexity:
     def __init__(self) -> None:
@@ -12,6 +14,7 @@ class GenerationNameComplexity:
                            "Линейная сложность(O(n))",
                            "Факториальная сложность(O(n!))",
                            "Постоянная сложность(O(1))"]
+        
         
     def generation_label(self):
         count_list = [i for i in range(0, 5)]
@@ -48,11 +51,13 @@ class GenerationEntryAndButton:
         ttk.Button(text=f"{TEXT}", command=self.calling_func_const).grid(row=2, column=4,
                                                                          padx=20, pady=10)
     
+    
     def calling_func_quad(self):
         value = int(self.quadratic.get())
         graph = QuadraticComplexity(value)
         
         graph.drawing_a_graph()
+        
         
     def calling_func_log(self):
         value = int(self.logarithmic.get())
@@ -60,17 +65,20 @@ class GenerationEntryAndButton:
         
         graph.drawing_a_graph()
         
+        
     def calling_func_lin(self):
         value = int(self.linear.get())
         graph = LinearComplexity(value)
         
         graph.drawing_a_graph()
+       
         
     def calling_func_fact(self):
         value = int(self.factorial.get())
         graph = FactorialComplexity(value)
         
         graph.drawing_a_graph()
+        
         
     def calling_func_const(self):
         value = int(self.constant.get())
@@ -86,6 +94,7 @@ class GenerationMainGraph:
         ttk.Button(text="Получить общий график!", command=self.calling_main_draw).grid(row=4, column=0, 
                                                        columnspan=5, padx=20, pady=20, 
                                                        sticky="ew")
+     
         
     def calling_main_draw(self):
         value = int(self.main_graph.get())

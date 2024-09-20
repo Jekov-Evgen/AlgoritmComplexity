@@ -6,6 +6,7 @@ class FactorialComplexity:
     def __init__(self, number_of_element) -> None:
         self.number_of_element = number_of_element
         
+        
     def drawing_a_graph(self):
         data = CalculationOfTheFactorialOfNumber()
         x_values = list(range(1, self.number_of_element + 1))
@@ -15,9 +16,11 @@ class FactorialComplexity:
         
         plt.show()
         
+        
 class LinearComplexity:
     def __init__(self, number_of_element) -> None:
         self.number_of_element = number_of_element
+        
         
     def drawing_a_graph(self):
         data = LinearComplexityCalculation(self.number_of_element)
@@ -28,10 +31,12 @@ class LinearComplexity:
         plt.yticks(x_value)
         
         plt.show()
+      
         
 class ConstantComplexity:
     def __init__(self, number_of_element) -> None:
         self.number_of_element = number_of_element
+        
         
     def drawing_a_graph(self):
         data = CalculationOfTheComplexityConstant(self.number_of_element)
@@ -43,9 +48,11 @@ class ConstantComplexity:
         
         plt.show()
         
+        
 class QuadraticComplexity:
     def __init__(self, number_of_element) -> None:
         self.number_of_element = number_of_element
+        
         
     def drawing_a_graph(self):
         data = QuadraticComplexityCalculation(self.number_of_element)
@@ -56,9 +63,11 @@ class QuadraticComplexity:
         
         plt.show()
         
+        
 class LogarithmicComplexity:
     def __init__(self, number_of_element) -> None:
         self.number_of_element = number_of_element
+        
         
     def drawing_a_graph(self):
         data = LogarithmicComplexityCalculation(self.number_of_element)

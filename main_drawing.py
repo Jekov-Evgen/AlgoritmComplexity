@@ -5,13 +5,13 @@ class MainDraw:
     def __init__(self, number_of_element) -> None:
         self.number_of_element = number_of_element
     
+    
     def drawing_a_graph(self):
         factorial = CalculationOfTheFactorialOfNumber(self.number_of_element)
         linear = LinearComplexityCalculation(self.number_of_element)
         quadratic = QuadraticComplexityCalculation(self.number_of_element)
         log = LogarithmicComplexityCalculation(self.number_of_element)
         const = CalculationOfTheComplexityConstant(self.number_of_element)
-        
         x_values = list(range(1, self.number_of_element + 1))
         
         plt.plot(x_values, factorial.calculate_factorial_complexity(), 
@@ -30,5 +30,4 @@ class MainDraw:
                  label="Константная сложность")
         
         plt.legend()
-        
         plt.show()
